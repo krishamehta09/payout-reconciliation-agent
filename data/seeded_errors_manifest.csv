@@ -1,0 +1,16 @@
+deal_id,error_type
+D-1083,wrong_rate
+D-1172,wrong_rate
+D-1027,wrong_rate
+D-1042,wrong_rate
+D-1085,missing_credit
+D-1106,missing_credit
+D-1178,missing_credit
+D-1127,missing_credit
+D-1074,duplicate
+D-1170,duplicate
+D-1103,duplicate
+D-1195,duplicate
+D-1141,amount_mismatch
+D-1010,amount_mismatch
+D-1117,amount_mismatch

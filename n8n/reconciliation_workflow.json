@@ -1,0 +1,12 @@
+{
+  "name": "Payout Reconciliation Agent",
+  "nodes": [
+    {"parameters": {}, "id": "1", "name": "Manual Trigger", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [200, 300]},
+    {"parameters": {"command": "cd /path/to/payout-reconciliation-agent && python3 reconcile.py"}, "id": "2", "name": "Run Reconciliation", "type": "n8n-nodes-base.executeCommand", "typeVersion": 1, "position": [440, 300]},
+    {"parameters": {"fileSelector": "/path/to/payout-reconciliation-agent/output/exception_report.md"}, "id": "3", "name": "Read Exception Report", "type": "n8n-nodes-base.readWriteFile", "typeVersion": 1, "position": [700, 300]}
+  ],
+  "connections": {
+    "Manual Trigger": {"main": [[{"node": "Run Reconciliation", "type": "main", "index": 0}]]},
+    "Run Reconciliation": {"main": [[{"node": "Read Exception Report", "type": "main", "index": 0}]]}
+  }
+}
